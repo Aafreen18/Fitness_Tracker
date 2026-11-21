@@ -161,12 +161,10 @@ Start the Strapi backend without development auto-reloading:
 npm run start
 \`\`\`
 
-## 🎥 Demo
+## 🎥 Project Demo
 
-Experience the application in action:
-
-
-
+[![Watch the Demo][(https://drive.google.com/file/d/1XykFtaUkRDl1zBvh0spj6i3AizPWbED_/view?usp=drive_link)]
+Click the thumbnail above to watch the full project demonstration.
 
 ## 🔮 Future Improvements
 

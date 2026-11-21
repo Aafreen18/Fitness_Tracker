@@ -1,9 +1,9 @@
-import { GoogleGenAI } from "@google/genai";
 import fs from "fs";
 
 export const analyzeImage = async (filePath: string, mimeType: string)=>{
 
     try {
+    const { GoogleGenAI } = await import("@google/genai");
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
         throw new Error("GEMINI_API_KEY is not configured on the server");

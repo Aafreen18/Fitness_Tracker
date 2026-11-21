@@ -105,7 +105,8 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 \`\`\`bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/Aafreen18/Fitness_Tracker.git)
+
 cd YOUR_REPOSITORY
 \`\`\`
 
@@ -145,8 +146,6 @@ The Strapi backend runs in development mode with automatic reloading.
 | Variable | Description |
 |---|---|
 | `GEMINI_API_KEY` | API key used for Google Gemini AI integration |
-
-Never commit your `.env` file or expose API keys publicly.
 
 ## 🚀 Production
 

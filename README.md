@@ -46,31 +46,36 @@ The AI Food Snap feature allows users to analyze food images and simplify food l
 5. The result is returned to the frontend in a structured format.
 6. Users can use the result to log their food intake.
 
-## 🏗️ Architecture
+┌──────────────────────────────────────┐
+│   React + TypeScript Frontend      │
+└──────────────────┬───────────────────┘
+                   │ REST API Request
+                   ▼
+┌──────────────────────────────────────┐
+│         Strapi Backend             │
+└──────────────────┬───────────────────┘
+                   │
+                   ▼
+┌──────────────────────────────────────┐
+│     Image Analysis Service         │
+└──────────────────┬───────────────────┘
+                   │
+                   ▼
+┌──────────────────────────────────────┐
+│        Google Gemini AI            │
+└──────────────────┬───────────────────┘
+                   │
+                   ▼
+┌──────────────────────────────────────┐
+│  Food Name + Calorie Estimate     │
+└──────────────────┬───────────────────┘
+                   │
+                   ▼
+┌──────────────────────────────────────┐
+│      Frontend / Food Log          │
+└──────────────────────────────────────┘
 
-\`\`\`
-React + TypeScript Frontend
-          │
-          │ REST API Request
-          ▼
-      Strapi Backend
-          │
-          ▼
-   Image Analysis Service
-          │
-          ▼
-    Google Gemini AI
-          │
-          ▼
- Food Name + Calorie Estimate
-          │
-          ▼
-     Frontend / Food Log
-\`\`\`
 
-## 📂 Project Structure
-
-\`\`\`
 project/
 │
 ├── frontend/
@@ -79,6 +84,7 @@ project/
 │   │   ├── pages/
 │   │   ├── context/
 │   │   └── ...
+│   │
 │   └── package.json
 │
 ├── backend/
@@ -87,10 +93,10 @@ project/
 │   │   ├── controllers/
 │   │   ├── services/
 │   │   └── ...
+│   │
 │   └── package.json
 │
 └── README.md
-\`\`\`
 
 ## ⚙️ Getting Started
 
@@ -107,7 +113,7 @@ Make sure you have the following installed:
 \`\`\`bash
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/Aafreen18/Fitness_Tracker.git)
 
-cd YOUR_REPOSITORY
+cd Fitness_Tracker
 \`\`\`
 
 ### 2. Setup the Frontend

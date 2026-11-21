@@ -46,36 +46,31 @@ The AI Food Snap feature allows users to analyze food images and simplify food l
 5. The result is returned to the frontend in a structured format.
 6. Users can use the result to log their food intake.
 
-┌──────────────────────────────────────┐
-│   React + TypeScript Frontend      │
-└──────────────────┬───────────────────┘
-                   │ REST API Request
-                   ▼
-┌──────────────────────────────────────┐
-│         Strapi Backend             │
-└──────────────────┬───────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────┐
-│     Image Analysis Service         │
-└──────────────────┬───────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────┐
-│        Google Gemini AI            │
-└──────────────────┬───────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────┐
-│  Food Name + Calorie Estimate     │
-└──────────────────┬───────────────────┘
-                   │
-                   ▼
-┌──────────────────────────────────────┐
-│      Frontend / Food Log          │
-└──────────────────────────────────────┘
+## 🏗️ Architecture
 
+```
+React + TypeScript Frontend
+            │
+            │ REST API Request
+            ▼
+      Strapi Backend
+            │
+            ▼
+  Image Analysis Service
+            │
+            ▼
+     Google Gemini AI
+            │
+            ▼
+Food Name + Calorie Estimate
+            │
+            ▼
+   Frontend / Food Log
+```
 
+## 📂 Project Structure
+
+```
 project/
 │
 ├── frontend/
@@ -84,7 +79,6 @@ project/
 │   │   ├── pages/
 │   │   ├── context/
 │   │   └── ...
-│   │
 │   └── package.json
 │
 ├── backend/
@@ -93,10 +87,10 @@ project/
 │   │   ├── controllers/
 │   │   ├── services/
 │   │   └── ...
-│   │
 │   └── package.json
 │
 └── README.md
+```
 
 ## ⚙️ Getting Started
 

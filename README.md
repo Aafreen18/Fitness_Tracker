@@ -42,7 +42,7 @@ The AI Food Snap feature allows users to analyze food images and simplify food l
 1. Upload or select a food image.
 2. The image is sent to the backend for analysis.
 3. The backend processes the image using the Google Gemini API.
-4. AI identifies the food and estimates its calorie content.
+4. Google Gemini analyzes the uploaded food image, identifies the food items, and provides an estimated calorie count to assist users with food logging.
 5. The result is returned to the frontend in a structured format.
 6. Users can use the result to log their food intake.
 
@@ -104,42 +104,43 @@ Make sure you have the following installed:
 
 ### 1. Clone the Repository
 
-\`\`\`bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/Aafreen18/Fitness_Tracker.git)
-
+```bash
+git clone https://github.com/Aafreen18/Fitness_Tracker.git
 cd Fitness_Tracker
-\`\`\`
+```
 
 ### 2. Setup the Frontend
 
-\`\`\`bash
-cd frontend
+```bash
+cd client
 npm install
 npm run dev
-\`\`\`
+```
 
 ### 3. Setup the Backend
 
-Open a separate terminal:
+Open a separate terminal in the project root directory:
 
-\`\`\`bash
-cd backend
+```bash
+cd server
 npm install
-\`\`\`
+```
 
-Create a `.env` file in your backend directory and configure your environment variables:
+Create a `.env` file inside the `server` directory and configure your environment variable:
 
-\`\`\`env
+```env
 GEMINI_API_KEY=your_gemini_api_key
-\`\`\`
+```
 
-Start Strapi in development mode:
+Start the Strapi backend:
 
-\`\`\`bash
+```bash
 npm run develop
-\`\`\`
+```
 
 The Strapi backend runs in development mode with automatic reloading.
+
+---
 
 ## 🔑 Environment Variables
 
@@ -147,24 +148,31 @@ The Strapi backend runs in development mode with automatic reloading.
 |---|---|
 | `GEMINI_API_KEY` | API key used for Google Gemini AI integration |
 
+> ⚠️ Never commit your `.env` file or expose your Gemini API key publicly.
+
+---
+
 ## 🚀 Production
 
-Build the frontend:
+### Build the Frontend
 
-\`\`\`bash
+```bash
+cd client
 npm run build
-\`\`\`
+```
 
-Start the Strapi backend without development auto-reloading:
+### Start the Backend in Production Mode
 
-\`\`\`bash
+```bash
+cd server
 npm run start
-\`\`\`
+```
+
+
 
 ## 🎥 Project Demo
 
-[![Watch the Demo][(https://drive.google.com/file/d/1XykFtaUkRDl1zBvh0spj6i3AizPWbED_/view?usp=drive_link)]
-Click the thumbnail above to watch the full project demonstration.
+[▶ Watch the AI Fitness Tracker Demo](https://drive.google.com/file/d/1XykFtaUkRDl1zBvh0spj6i3AizPWbED_/view?usp=drive_link)
 
 ## 🔮 Future Improvements
 
